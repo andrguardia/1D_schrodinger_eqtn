@@ -8,14 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var xMinString: String = "0.0"
+    @State var xMaxString: String = "10.0"
+    @State var EMinString: String = "0.0"
+    @State var EMaxString: String = "1.0"
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("1D Solution to Schrodinger Equation")
+            
+            HStack {
+                Text("X MIN:")
+                TextField("", text: $xMinString)
+                Text("X MAX:")
+                TextField("", text: $xMaxString)
+            }
+            
+            HStack {
+                Text("E MIN:")
+                TextField("", text: $EMinString)
+                Text("E MAX:")
+                TextField("", text: $EMaxString)
+            }
+            Button("Compute", action: {self.calculate()})
         }
+        
         .padding()
+    }
+    
+    func calculate(){
+        print("Calculating...")
     }
 }
 
