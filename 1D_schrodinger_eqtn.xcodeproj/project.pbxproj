@@ -14,6 +14,9 @@
 		AB98360929A97CF000993E49 /* _D_schrodinger_eqtnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98360829A97CF000993E49 /* _D_schrodinger_eqtnTests.swift */; };
 		AB98361329A97CF000993E49 /* _D_schrodinger_eqtnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98361229A97CF000993E49 /* _D_schrodinger_eqtnUITests.swift */; };
 		AB98361529A97CF000993E49 /* _D_schrodinger_eqtnUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98361429A97CF000993E49 /* _D_schrodinger_eqtnUITestsLaunchTests.swift */; };
+		AB98362229A984DA00993E49 /* Wave Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98362129A984DA00993E49 /* Wave Function.swift */; };
+		AB98362629A987BB00993E49 /* Potential.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98362529A987BB00993E49 /* Potential.swift */; };
+		AB98362A29A98C0100993E49 /* Energy_Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98362929A98C0100993E49 /* Energy_Functional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		AB98360E29A97CF000993E49 /* 1D_schrodinger_eqtnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 1D_schrodinger_eqtnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB98361229A97CF000993E49 /* _D_schrodinger_eqtnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _D_schrodinger_eqtnUITests.swift; sourceTree = "<group>"; };
 		AB98361429A97CF000993E49 /* _D_schrodinger_eqtnUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _D_schrodinger_eqtnUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB98362129A984DA00993E49 /* Wave Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wave Function.swift"; sourceTree = "<group>"; };
+		AB98362529A987BB00993E49 /* Potential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Potential.swift; sourceTree = "<group>"; };
+		AB98362929A98C0100993E49 /* Energy_Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Energy_Functional.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 		AB9835F529A97CEF00993E49 /* 1D_schrodinger_eqtn */ = {
 			isa = PBXGroup;
 			children = (
+				AB98362529A987BB00993E49 /* Potential.swift */,
+				AB98362929A98C0100993E49 /* Energy_Functional.swift */,
+				AB98362129A984DA00993E49 /* Wave Function.swift */,
 				AB9835F629A97CEF00993E49 /* _D_schrodinger_eqtnApp.swift */,
 				AB9835F829A97CEF00993E49 /* ContentView.swift */,
 				AB9835FA29A97CF000993E49 /* Assets.xcassets */,
@@ -261,6 +270,9 @@
 			files = (
 				AB9835F929A97CEF00993E49 /* ContentView.swift in Sources */,
 				AB9835F729A97CEF00993E49 /* _D_schrodinger_eqtnApp.swift in Sources */,
+				AB98362629A987BB00993E49 /* Potential.swift in Sources */,
+				AB98362229A984DA00993E49 /* Wave Function.swift in Sources */,
+				AB98362A29A98C0100993E49 /* Energy_Functional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
