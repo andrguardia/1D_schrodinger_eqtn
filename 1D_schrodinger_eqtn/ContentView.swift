@@ -19,6 +19,9 @@ struct ContentView: View {
     @State var hbar_c:Double = 0.1973269804 /// in eV*um
     @State var psi_xMax: Double = 0.0
     
+    @State var eigenValueArray: [(EnergyPoint: Double, YPoint: Double)] = []
+
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -48,6 +51,9 @@ struct ContentView: View {
             }
             
             Button("Compute", action: {self.calculate()})
+            
+            HStack {Text("Energy Eigenvalues:")
+            }
         }
         
         .padding()
@@ -77,7 +83,7 @@ struct ContentView: View {
             myWF.PsiDoublePrimeArr.removeAll()
             
             myWF.PsiArr.append((xPoint: xMin, psiPoint: 0.0))
-            myWF.PsiPrimeArr.append((xPoint: xMin, psiPrimePoint: 500.0))
+            myWF.PsiPrimeArr.append((xPoint: xMin, psiPrimePoint: 1.0))
             myWF.PsiDoublePrimeArr.append((xPoint:xMin, psiDoublePrimePoint: 0.0))
             
             for n in 1..<myPotential.PotArr.count{
@@ -98,8 +104,39 @@ struct ContentView: View {
             myFunctional.EFunctionalArr.append((EnergyPoint: E, YPoint: currentFunctional))
         }
         
+        
         print(myFunctional.EFunctionalArr)
         
+        
+        func sign(_ number: Double) -> Double {
+            ///This function returns the sign of a double data type when inputted
+            if number == 0 {
+                return 0
+            } else if number > 0 {
+                return 1
+            } else {
+                return -1
+            }
+        }
+        
+        var previousSign: Double?
+        
+        for i in 1..<myFunctional.EFunctionalArr.count{
+            ///This for loop parses through the elements of the Energy functional Array and finds the elements that change sign, while also printing the index of the alue hat changes sign
+            
+            let signCurrent = sign(myFunctional.EFunctionalArr[i].YPoint)
+            
+                if let prevSign = previousSign {
+                    if signCurrent != prevSign {
+                        print("EigenValue Found!")
+                        print(i)
+                        eigenValueArray.append(myFunctional.EFunctionalArr[i])
+                    }
+                }
+                previousSign = signCurrent
+        }
+        
+        print(eigenValueArray)
     }
 }
 
